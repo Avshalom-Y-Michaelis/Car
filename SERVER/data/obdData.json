@@ -1,0 +1,19 @@
+{
+    "general": {
+        "RPM": "RPM",
+        "SPEED": "SPEED",
+        "OIL_TEMP": "OIL_TEMP",
+        "COOLANT_TEMP": "COOLANT_TEMP",
+        "BAROMETRIC_PRESSURE": "BAROMETRIC_PRESSURE",
+        "FUEL_LEVEL": "FUEL_LEVEL",
+        "other": ["not obd engen temp"]
+    },
+    "airIntake": {
+        "INTAKE_PRESSURE": "INTAKE_PRESSURE",
+        "INTAKE_TEMP": "INTAKE_TEMP",
+        "MAF": "MAF",
+        "AMBIANT_AIR_TEMP": "AMBIANT_AIR_TEMP",
+        "ABSOLUTE_LOAD": "ABSOLUTE_LOAD",
+        "other": []
+    }
+}

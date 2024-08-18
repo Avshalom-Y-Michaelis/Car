@@ -1,0 +1,89 @@
+futer
+02
+13	O2_SENSORS
+14 - 1B	 O2_sensores_volted
+1C	OBD_COMPLIANCE
+1D	O2_SENSORS_ALT
+1F	RUN_TIME
+21	DISTANCE_W_MIL
+24 - 2BO2_S1_WR_VOLTAGE
+30	WARMUPS_SINCE_DTC_CLEAR
+31	DISTANCE_SINCE_DTC_CLEAR
+34 - 3B O2_S1_WR_CURRENT
+41	STATUS_DRIVE_CYCLE
+55 - 58 SHORT_O2_TRIM_B1
+
+
+
+---------------------------------------------REGULAR LYOUTE-------------------------------------------------------|                                                                                                                      
+--------------------------------------------------EXSOSTS                                                         |                                                              
+53	EVAP_VAPOR_PRESSURE_ABS                                                                                       |                              
+54	EVAP_VAPOR_PRESSURE_ALT                                                                                       |                              
+2E	EVAPORATIVE_PURGE                                                                                             |                          
+32	EVAP_VAPOR_PRESSURE                                                                                           |                          
+3C - 3F CATALYST_TEMP_B2S2                                                                                        |                              
+2C	COMMANDED_EGR                                                                                                 |                      
+2D	EGR_ERROR                                                                                                     |                  
+                                                                                                                  |      
+                                                                                                                  |      
+                                                                                                                  |      
+--------------------------FULE PARAMETERS                                                                         |                                              
+59	FUEL_RAIL_PRESSURE_ABS                                                                                        |                              
+5E	FUEL_RATE                                                                                                     |                  
+5D	FUEL_INJECT_TIMING                                                                                            |                          
+22	FUEL_RAIL_PRESSURE_VAC                                                                                        |                              
+23	FUEL_RAIL_PRESSURE_DIRECT                                                                                     |                                  
+06 - 09 frule trimes                                                                                              |                          
+0E	TIMING_ADVANCE                                                                                                |                      
+0A - fuel pressure                                                                                                |                      
+2F	FUEL_LEVEL                                                                                                    |                  
+44	COMMANDED_EQUIV_RATIO                                                                                         |                              
+                                                                                                                  |      
+                                                                                                                  |      
+                                                                                                                  |      
+-------------------------PEDALS PUSHITONS                                                                         |                                              
+11	THROTTLE_POS                                                                                                  |                      
+47-4C positions                                                                                                   |                  
+5A	RELATIVE_ACCEL_POS                                                                                            |                          
+45	RELATIVE_THROTTLE_POS                                                                                         |                              
+                                                                                                                  |      
+                                                                                                                  |      
+                                                                                                                  |      
+-------------------------------AIR INTAKE                                                                         |                                              
+0B	INTAKE_PRESSURE                                                                                               |                      
+0F	INTAKE_TEMP                                                                                                   |                  
+10	MAF                                                                                                           |          
+46	AMBIANT_AIR_TEMP                                                                                              |                          
+2F	FUEL_LEVEL                                                                                                    |                  
+43	ABSOLUTE_LOAD                                                                                                 |                      
+                                                                                                                  |      
+                                                                                                                  |      
+                                                                                                                  |      
+-------------------------general                                                                                  |                                      
+0C	RPM                                                                                                           |          
+0D	SPEED                                                                                                         |              
+5C	OIL_TEMP                                                                                                      |                  
+05	COOLANT_TEMP       
+
+
+
+
+                                                                                           |                      
+33	BAROMETRIC_PRESSURE                                                                                           |                          
+------------------------------------------------------------------------------------------------------------------|
+
+
+
+
+
+
+
+
+
+ATHER LIYOUT:
+
+MINIMAL
+
+TEMPERTUSRS
+MINE WORNINGS
+
