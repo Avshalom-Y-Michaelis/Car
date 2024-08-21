@@ -54,7 +54,6 @@ futer
 0F	INTAKE_TEMP                                                                                                   |                  
 10	MAF                                                                                                           |          
 46	AMBIANT_AIR_TEMP                                                                                              |                          
-2F	FUEL_LEVEL                                                                                                    |                  
 43	ABSOLUTE_LOAD                                                                                                 |                      
                                                                                                                   |      
                                                                                                                   |      
@@ -63,7 +62,9 @@ futer
 0C	RPM                                                                                                           |          
 0D	SPEED                                                                                                         |              
 5C	OIL_TEMP                                                                                                      |                  
-05	COOLANT_TEMP       
+05	COOLANT_TEMP     
+2F	FUEL_LEVEL                                                                                                    |                  
+
 
 
 

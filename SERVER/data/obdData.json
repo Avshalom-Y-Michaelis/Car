@@ -4,16 +4,29 @@
         "SPEED": "SPEED",
         "OIL_TEMP": "OIL_TEMP",
         "COOLANT_TEMP": "COOLANT_TEMP",
-        "BAROMETRIC_PRESSURE": "BAROMETRIC_PRESSURE",
         "FUEL_LEVEL": "FUEL_LEVEL",
-        "other": ["not obd engen temp"]
+        "BAROMETRIC_PRESSURE": "BAROMETRIC_PRESSURE"
     },
     "airIntake": {
         "INTAKE_PRESSURE": "INTAKE_PRESSURE",
         "INTAKE_TEMP": "INTAKE_TEMP",
         "MAF": "MAF",
         "AMBIANT_AIR_TEMP": "AMBIANT_AIR_TEMP",
-        "ABSOLUTE_LOAD": "ABSOLUTE_LOAD",
-        "other": []
+        "ABSOLUTE_LOAD": "ABSOLUTE_LOAD"
+    },
+    "pedalsPositions": {
+        "THROTTLE_POS": "THROTTLE_POS",
+        "RELATIVE_ACCEL_POS": "RELATIVE_ACCEL_POS",
+        "RELATIVE_THROTTLE_POS": "RELATIVE_THROTTLE_POS"
+    },
+    "fuleParameters": {
+        "FUEL_RAIL_PRESSURE_ABS": "FUEL_RAIL_PRESSURE_ABS",
+        "FUEL_RATE": "FUEL_RATE",
+        "FUEL_INJECT_TIMING": "FUEL_INJECT_TIMING",
+        "FUEL_RAIL_PRESSURE_VAC": "FUEL_RAIL_PRESSURE_VAC",
+        "FUEL_RAIL_PRESSURE_DIRECT": "FUEL_RAIL_PRESSURE_DIRECT",
+        "TIMING_ADVANCE": "TIMING_ADVANCE",
+        "FUEL_LEVEL": "FUEL_LEVEL",
+        "COMMANDED_EQUIV_RATIO": "COMMANDED_EQUIV_RATIO"
     }
 }
