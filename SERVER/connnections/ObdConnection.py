@@ -2,14 +2,14 @@ import obd
 
 class ObdConnection(object):
   _CONNECTION_STRING = "COM7"
-  _connection = None
+  connection = obd.Async(_CONNECTION_STRING)
 
   def __new__(selfe):
-     return selfe.Instanc()
+         if not hasattr(selfe, 'instance'):
+             selfe.instance = super(ObdConnection, selfe).__new__(selfe)
 
-  def Instanc(selfe):
-    if selfe._connection.is_connected():
-       selfe._connection.close()
-       selfe._connection = obd.OBD(selfe._CONNECTION_STRING)
+         if not selfe.instance.connection.is_connected():
+            selfe.instance.connection.close()
+            selfe.instance.connection = obd.Async(selfe._CONNECTION_STRING)
 
-    return selfe._connection
+         return selfe.instance

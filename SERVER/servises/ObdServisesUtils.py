@@ -2,20 +2,29 @@ import obd
 from connnections.ObdConnection import ObdConnection
 import json
 
-def getObdSectionData(sectionName):
-    sectionData = getSectionKeys(sectionName)
-
-    for recordKey,recordName in sectionData.items():
-        sectionData[recordKey] = ObdConnection.Instanc().query(obd.commands[recordName], True).value
-    return sectionData
-
+def getfile(filePath):
+    with open(filePath) as file:
+        return json.load(file)
+    
+    
 def getSectionKeys(sectionName):
-    file = open('./data/obdData.json')
-    data = json.load(file)
-    file.close()
+    data = getfile('./data/obdData.json')    
     
     return data[sectionName]
 
+def startAllWhach(emitData):
+    datafile =  getfile('./data/obdData.json')
+    ObdConnection().connection.stop()
+
+    for section in datafile:
+        sectionData = datafile[section]
+
+        for recordName in sectionData:
+            print("----------------------------------------------")
+            print(recordName)             
+            ObdConnection().connection.watch(obd.commands[recordName], callback=lambda res: emitData({"name": sectionData[recordName] ,"value": str(res.value)}) ,force=True)
+    
+    ObdConnection().connection.start()
 
 
 
@@ -23,11 +32,11 @@ def getSectionKeys(sectionName):
 # for x in range(0x5f):
 #     respons[x] =  ObdConnection.Instanc().query(obd.commands[1][x], True).value
 
-_connection = obd.OBD("COM7")
-respons = dict( [(str(x),str(_connection.query(obd.commands[9][x], True).value)) for x in range(0x0b) ])
-print(_connection.query(obd.commands.ECU_NAME, True).value)
-file = open('./data/MODE1.json')
-json.dump(file, respons)
+# _connection = obd.OBD("COM7")
+# respons = dict( [(str(x),str(_connection.query(obd.commands[9][x], True).value)) for x in range(0x0b) ])
+# print(_connection.query(obd.commands.ECU_NAME, True).value)
+# file = open('./data/MODE1.json')
+# json.dump(file, respons)
 
-with open("./data/MODE9.json", "w") as fid:
-    json.dump(respons, fid, indent=4, sort_keys=True)
+# with open("./data/MODE9.json", "w") as fid:
+#     json.dump(respons, fid, indent=4, sort_keys=True)
