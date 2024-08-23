@@ -10,9 +10,6 @@ function MainLayout() {
          [row5-start] "part5 part5 part5 part4 part4 " auto [row5-end] \
          / auto auto auto auto auto';
 
-
-    console.log(mainLayoutGrid);
-
     return (
         <div className="mainLayout" style={{ gridTemplate: mainLayoutGrid, gap: "3%" }}>
             <BaseWindow gridArea={'part1'} shadowColor={"FC3CC8"}/>
