@@ -1,0 +1,14 @@
+{
+    "dataSections": {
+        "general": "general",
+        "airIntake": "airIntake",
+        "pedalsPositions": "pedalsPositions",
+        "fuleParameters": "fuleParameters"
+    },
+    "shadowDirection": {
+     "up" : "-15px",
+     "down": "15px",
+     "right": "15px",
+     "left": "-15px"   
+    }
+}

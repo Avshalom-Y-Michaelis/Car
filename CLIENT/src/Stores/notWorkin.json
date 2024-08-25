@@ -1,0 +1,20 @@
+{
+    "OIL_TEMP": {
+        "minValue": 0,
+        "maxValue": 150,
+        "units": "°C",
+        "stages": [80, 100, 120]
+    },
+    "FUEL_LEVEL": {
+        "minValue": 0,
+        "maxValue": 10,
+        "units": "%",
+        "stages": [2, 5, 7]
+    },
+    "BAROMETRIC_PRESSURE": {
+        "minValue": 0,
+        "maxValue": 200,
+        "units": "% A_P",
+        "stages": [50, 100, 150, 200]
+    }
+}

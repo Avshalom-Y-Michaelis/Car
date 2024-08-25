@@ -10,19 +10,16 @@ app.wsgi_app = socketio.WSGIApp(sio, app.wsgi_app)
 
 # pint.util.Quantity
 
-def collbac(data):
-    print(data)
-    # print(type(str(data.value)))
-    # sio.emit("update_data", {"value": str(data.value)})
-    sio.emit("update_data", data)
 
-startAllWhach(collbac)
+startAllWhach(lambda nameSpace,data: sio.emit("update_data",data=data, namespace=nameSpace))
 
-@sio.event
-def connect(sid, environ, auth):
-    print('connect')
+# @sio.event
+# def connect(sid, environ, auth):
+#     print('connect')
 
-
+# @sio.event(namespace='/general')
+# def connect(sid, environ, auth):
+#     print('connect to general')
 
 @app.route("/a")
 def hello_world():
