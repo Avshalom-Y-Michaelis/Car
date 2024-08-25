@@ -1,0 +1,70 @@
+.button-layout-layout {
+    --baseWidth: 5px;
+    --baseHeight: calc(var(--baseWidth) * 5);
+
+    margin: calc(var(--baseHeight) + var(--baseWidth) * 1);
+    height: var(--baseHeight);
+
+    display: grid;
+    grid:
+        [row1-start] 'right top' var(--baseWidth) [row1-end]
+        [row2-start] 'right midel' var(--baseWidth) [row2-end]
+        [row3-start] 'right bottom' var(--baseWidth) [row3-end]
+        / auto auto;
+
+    gap: var(--baseWidth);
+    transition: transform 1s;
+    position: fixed;
+}
+
+.delayed-transittion {
+    /* transition-property: transform, background-color, box-shadow;
+    transition-duration: var(--transformDuration);
+    transition-delay: var(--transformDelay); */
+    transition: transform 1s linear 0.2s, background-color 1.2s linear 0.2s,
+        box-shadow 1.2s linear 0.2s;
+}
+
+.button-short-line {
+    width: var(--baseHeight);
+    height: var(--baseWidth);
+}
+
+.button-long-line {
+    width: var(--baseWidth);
+    height: var(--baseHeight);
+}
+/* 
+:root {
+    --transformDuration: 1s;
+    --transformDelay: 0.2s;
+
+
+}
+
+
+.button-layout-layout {
+    margin: 35px;
+    height: 25px;
+    display: grid;
+    grid:
+        [row1-start] 'right top' auto [row1-end] [row2-start] 'right midel' auto [row2-end] [row3-start] 'right bottom' auto [row3-end] / auto auto;
+
+    gap: 7px;
+
+    transition: transform 1s
+}
+
+.delayed-transittion {
+    transition: transform 1s linear 0.2s, background-color 1.2s linear 0.2s, box-shadow 1.2s linear 0.2s
+}
+
+.button-short-line {
+    width: 25px;
+    height: 5px;
+}
+
+.button-long-line {
+    width: 5px;
+    height: 29px;
+} */

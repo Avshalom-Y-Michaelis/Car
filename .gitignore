@@ -10,6 +10,9 @@ htmlcov/
 .tox/
 docs/_build/
 
+#-------outer files
+document-metirials/
+
 
 
 
