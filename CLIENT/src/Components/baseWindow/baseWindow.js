@@ -13,7 +13,7 @@ function BaseWindow({ gridArea, shadowColor, shadowH, shadowV, content, titel })
                 gridArea: gridArea,
             }}
         >
-            <div style={{fontSize: "500%", color: shadowColor, fontWeight: 1000}}>
+            <div style={{fontSize: "150%", color: shadowColor }}>
                 {titel}
             </div>
             {content}

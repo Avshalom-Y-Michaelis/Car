@@ -4,6 +4,7 @@
 
     margin: calc(var(--baseHeight) + var(--baseWidth) * 1);
     height: var(--baseHeight);
+    position: absolute;
 
     display: grid;
     grid:
@@ -14,7 +15,6 @@
 
     gap: var(--baseWidth);
     transition: transform 1s;
-    position: fixed;
 }
 
 .delayed-transittion {

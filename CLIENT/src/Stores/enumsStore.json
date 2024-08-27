@@ -6,9 +6,9 @@
         "fuleParameters": "fuleParameters"
     },
     "shadowDirection": {
-     "up" : "-15px",
-     "down": "15px",
-     "right": "15px",
-     "left": "-15px"   
+     "up" : "-5px",
+     "down": "5px",
+     "right": "5px",
+     "left": "-5px"   
     }
 }

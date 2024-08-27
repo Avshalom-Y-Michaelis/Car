@@ -1,59 +1,48 @@
 import GaugeComponent from 'react-gauge-component';
 import './BaseGauge.css';
+
+const getArc = (stages) => {
+    let subArc = [];
+    if (stages) {
+        subArc = stages.map((stage) => {
+            return { limit: stage };
+        });
+    }
+
+    return subArc;
+};
+
 function BaseGauge({
     sectionData,
     minValue,
     maxValue,
-    colorArry = ['#5BE12C', '#EA4228'],
+    colorArry,
     units,
     stages,
     layoutPart,
-    titel
+    titel,
 }) {
-    const getArc = () => {
-        let subArc = [];
-        if (stages) {
-            subArc = stages.map((stage) => {
-                return { limit: stage };
-            });
-        }
-
-        return subArc;
-    };
-
     const gauge = (
         <div>
-            {titel}
+            <div className="gauge-titel gauge-text">{titel}</div>
             <GaugeComponent
                 className="gauge"
-                style={{ margin: 'auto' }}
                 value={sectionData}
                 type="radial"
                 labels={{
                     valueLabel: {
                         formatTextValue: (value) => `${value} ${units}`,
-                        style: {
-                            // fontSize: '20%',
-                            paddingTop: '-100px',
-                        },
                         maxDecimalDigits: 0,
                         matchColorWithArc: true,
                     },
                     tickLabels: {
                         type: 'outer',
                         hideMinMax: true,
-                        // valueConfig: {
-                        //     formatTextValue: (value) => value + 'ºC-------',
-                        //     fontSize: 50,
-                        // },
-                        //type: 'inner',
-                        // ticks: [{ value: 20 }],
                     },
                 }}
                 arc={{
                     colorArray: colorArry,
-                    //gradient: true,
-                    subArcs: getArc(),
+                    subArcs: getArc(stages),
                     padding: 0.02,
                     width: 0.3,
                 }}
@@ -67,7 +56,7 @@ function BaseGauge({
     );
 
     return (
-        <div className="no-data gauge-parent" style={{ gridArea: layoutPart }}>
+        <div className="gauge-text  gauge-parent" style={{ gridArea: layoutPart }}>
             {sectionData ? gauge : 'NO DATA'}
         </div>
     );

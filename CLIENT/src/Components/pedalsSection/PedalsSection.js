@@ -2,16 +2,14 @@ import BaseWindow from '../baseWindow/baseWindow';
 import BaseGauge from '../baseGauge/BaseGauge';
 import enumsStore from '../../Stores/enumsStore.json';
 import dataInfo from '../../Stores/dataInfo';
+import colorStor from '../../Stores/ColorStore.json';
 import { createDataConnection } from '../../Api/webSockets';
 import { useState } from 'react';
 
 function PedalsSection({ gridArea }) {
-    const layoutGrid =
-        '[row1-start] "THROTTLE_POS ABSOLUTE_LOAD" auto [row1-end] \
-            / auto auto ';
-
     const [THROTTLE_POS, setThrottelPos] = useState(0);
     const [ABSOLUTE_LOAD, setAabsoluteLoad] = useState(0);
+    const TITEL = 'ENGION INFO'
 
     const eventObj = {
         THROTTLE_POS: setThrottelPos,
@@ -20,14 +18,18 @@ function PedalsSection({ gridArea }) {
 
     createDataConnection(enumsStore.dataSections.engion, eventObj);
 
+    const layoutGrid =
+        '[row1-start] "THROTTLE_POS ABSOLUTE_LOAD" auto [row1-end] \
+            / auto auto ';
+
     return (
         <BaseWindow
             gridArea={gridArea}
             layoutGrid={layoutGrid}
-            titel={'ENGION INFO'}
-            shadowH={enumsStore.shadowDirection.up}
+            titel={TITEL}
+            shadowH={enumsStore.shadowDirection.down}
             shadowV={enumsStore.shadowDirection.left}
-            shadowColor={'#FC3CC8'}
+            shadowColor={colorStor.shadow.pink}
             content={
                 <div
                     style={{
@@ -42,7 +44,7 @@ function PedalsSection({ gridArea }) {
                     <BaseGauge layoutPart={'ABSOLUTE_LOAD'} sectionData={ABSOLUTE_LOAD} {...dataInfo.ABSOLUTE_LOAD} /> */}
                     <BaseGauge
                         layoutPart={'THROTTLE_POS'}
-                        sectionData={90}
+                        sectionData={120}
                         {...dataInfo.THROTTLE_POS}
                     />
                     <BaseGauge
@@ -57,52 +59,3 @@ function PedalsSection({ gridArea }) {
 }
 
 export default PedalsSection;
-/*
-
-import BaseWindow from '../baseWindow/baseWindow';
-import BaseGauge from '../baseGauge/BaseGauge';
-import enumsStore from '../../Stores/enumsStore.json';
-import dataInfo from '../../Stores/dataInfo';
-import { createDataConnection } from '../../Api/webSockets';
-import { useState } from 'react';
-
-function GeneralSecton({ gridArea }) {
-
-
-    const layoutGrid =
-        '[row1-start] ". SPEED SPEED ." auto [row1-end] \
-            [row2-start] "RPM RPM COOLANT_TEMP COOLANT_TEMP" auto [row2-end] \
-            / auto auto auto auto auto';
-
-    return (
-        <BaseWindow
-            gridArea={gridArea}
-            layoutGrid={layoutGrid}
-            shadowColor={'#DC9544'}
-            shadowH={enumsStore.shadowDirection.down}
-            shadowV={enumsStore.shadowDirection.right}
-            titel={'GENERAL INFO'}
-            content={
-                <div
-                    style={{
-                        width: '100%',
-                        height: '90%',
-                        display: 'grid',K
-                        gridTemplate: layoutGrid,
-                        gap: '0%',
-                    }}
-                >
-                    <BaseGauge layoutPart={'RPM'} sectionData={3000} {...dataInfo.RPM} />
-                    <BaseGauge layoutPart={'SPEED'} sectionData={110} {...dataInfo.SPEED} />
-                    <BaseGauge
-                        layoutPart={'COOLANT_TEMP'}
-                        sectionData={90}
-                        {...dataInfo.COOLANT_TEMP}
-                    />
-                </div>
-            }
-        />
-    );
-}
-
-*/

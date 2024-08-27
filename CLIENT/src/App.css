@@ -1,6 +1,14 @@
-.App {
-  text-align: center;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
+.app {
+    text-align: center;
+    display: flex;
+    position: absolute;
+    font-weight: 1000;
+
+    --gauge-width: 25vh;
+    --gauge-titel-font-size: 2.5vh;
+}
+
+.app-size {
+    height: 100vh;
+    width: 120vh;
 }
