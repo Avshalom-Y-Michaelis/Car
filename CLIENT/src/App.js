@@ -1,18 +1,20 @@
 import './App.css';
 import backround from './Assets/backround.jpg';
-import MainLayout from './Components/mainLayout/mainLayout';
+import LayoutButton from './Components/layoutBoutton/layoutButton.js';
+import MainLayout from './Pages/mainLayout/mainLayout';
+
 
 function App() {
-
-
     return (
-        <div className="App">
+        <div className="app app-size">
             <img
+                className="app-size"
                 src={backround}
                 alt=""
-                style={{ position: 'fixed', display: 'block', width: '100vw' }}
+                style={{ position: 'absolute', display: 'block', zIndex: -1 }}
             ></img>
-            <MainLayout />
+            <MainLayout style={{width: "100px", height: "100vh"}}/>
+            <LayoutButton/>
         </div>
     );
 }

@@ -2,22 +2,17 @@
     "general": {
         "RPM": "RPM",
         "SPEED": "SPEED",
-        "OIL_TEMP": "OIL_TEMP",
-        "COOLANT_TEMP": "COOLANT_TEMP",
-        "FUEL_LEVEL": "FUEL_LEVEL",
-        "BAROMETRIC_PRESSURE": "BAROMETRIC_PRESSURE"
+        "COOLANT_TEMP": "COOLANT_TEMP"
+    },
+    "engion": {
+        "THROTTLE_POS": "THROTTLE_POS",
+        "ABSOLUTE_LOAD": "ABSOLUTE_LOAD"
     },
     "airIntake": {
         "INTAKE_PRESSURE": "INTAKE_PRESSURE",
         "INTAKE_TEMP": "INTAKE_TEMP",
         "MAF": "MAF",
-        "AMBIANT_AIR_TEMP": "AMBIANT_AIR_TEMP",
-        "ABSOLUTE_LOAD": "ABSOLUTE_LOAD"
-    },
-    "pedalsPositions": {
-        "THROTTLE_POS": "THROTTLE_POS",
-        "RELATIVE_ACCEL_POS": "RELATIVE_ACCEL_POS",
-        "RELATIVE_THROTTLE_POS": "RELATIVE_THROTTLE_POS"
+        "AMBIANT_AIR_TEMP": "AMBIANT_AIR_TEMP"
     },
     "fuleParameters": {
         "FUEL_RAIL_PRESSURE_ABS": "FUEL_RAIL_PRESSURE_ABS",
@@ -28,5 +23,12 @@
         "TIMING_ADVANCE": "TIMING_ADVANCE",
         "FUEL_LEVEL": "FUEL_LEVEL",
         "COMMANDED_EQUIV_RATIO": "COMMANDED_EQUIV_RATIO"
+    },
+    "not relevant": {
+        "FUEL_LEVEL": "FUEL_LEVEL",
+        "BAROMETRIC_PRESSURE": "BAROMETRIC_PRESSURE",
+        "OIL_TEMP": "OIL_TEMP",
+        "RELATIVE_THROTTLE_POS": "RELATIVE_THROTTLE_POS -??????????????????????",
+        "RELATIVE_ACCEL_POS": "RELATIVE_ACCEL_POS"
     }
-}
+}   

@@ -1,19 +1,23 @@
 import './baseWindow.css';
 
-function BaseWindow({gridArea, shadowColor}) {
-    let width = "100%";
-    let height = "100%";
-    let shadowBox = `5px 0px #${shadowColor}`
+function BaseWindow({ gridArea, shadowColor, shadowH, shadowV, content, titel }) {
+    let width = '100%';
+    let height = '100%';
     return (
         <div
             className="baseWindow"
             style={{
                 width: width,
                 height: height,
-                boxShadow: shadowBox,
-                gridArea: gridArea
+                boxShadow: `${shadowV} ${shadowH} ${shadowColor}`,
+                gridArea: gridArea,
             }}
-        ></div>
+        >
+            <div style={{fontSize: "150%", color: shadowColor }}>
+                {titel}
+            </div>
+            {content}
+        </div>
     );
 }
 

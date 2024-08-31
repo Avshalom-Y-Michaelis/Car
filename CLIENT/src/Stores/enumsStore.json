@@ -1,0 +1,14 @@
+{
+    "dataSections": {
+        "general": "general",
+        "engion": "engion",
+        "airIntake": "airIntake",
+        "fuleParameters": "fuleParameters"
+    },
+    "shadowDirection": {
+     "up" : "-5px",
+     "down": "5px",
+     "right": "5px",
+     "left": "-5px"   
+    }
+}

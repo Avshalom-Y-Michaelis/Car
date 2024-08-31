@@ -6,6 +6,11 @@ def getfile(filePath):
     with open(filePath) as file:
         return json.load(file)
 
+def getWhatcCallbackFunc(sectionName ,recordName, emitData):
+    def func(res):
+        emitData(f'/{sectionName}' ,{"name": recordName ,"value": str(res.value).split(" ")[0]})
+    return func
+
 def startAllWhach(emitData):
     datafile =  getfile('./data/obdData.json')
     ObdConnection().connection.stop()
@@ -14,12 +19,9 @@ def startAllWhach(emitData):
         sectionData = datafile[section]
 
         for recordName in sectionData:
-            print("----------------------------------------------")
-            print(recordName)             
-            ObdConnection().connection.watch(obd.commands[recordName], callback=lambda res: emitData({"name": sectionData[recordName] ,"value": str(res.value)}) ,force=True)
-    
-    ObdConnection().connection.start()
+            ObdConnection().connection.watch(obd.commands[recordName], callback=getWhatcCallbackFunc(section, recordName,emitData) ,force=True)
 
+    ObdConnection().connection.start()
 
 def getAllErrors():
     return ObdConnection().connection.query(obd.commands.GET_DTC)

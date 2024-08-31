@@ -1,0 +1,11 @@
+{
+    "lightBlue": "#0be4c5",
+    "darkBlue": "#22AF9D",
+    "gray": "#293e47",
+    "darkOreng": "#A8683E",
+    "lightOreng": "#e37b21",
+    "shadow": {
+        "orenge": "#DC9544",
+        "pink": "#FC3CC8"
+    }
+}
