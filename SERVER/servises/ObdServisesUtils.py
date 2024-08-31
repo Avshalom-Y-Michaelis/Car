@@ -5,12 +5,6 @@ import json
 def getfile(filePath):
     with open(filePath) as file:
         return json.load(file)
-    
-    
-def getSectionKeys(sectionName):
-    data = getfile('./data/obdData.json')    
-    
-    return data[sectionName]
 
 def startAllWhach(emitData):
     datafile =  getfile('./data/obdData.json')
@@ -26,6 +20,7 @@ def startAllWhach(emitData):
     
     ObdConnection().connection.start()
 
+<<<<<<< Updated upstream
 
 
 # respons = None
@@ -40,3 +35,10 @@ def startAllWhach(emitData):
 
 # with open("./data/MODE9.json", "w") as fid:
 #     json.dump(respons, fid, indent=4, sort_keys=True)
+=======
+def getAllErrors():
+    return ObdConnection().connection.query(obd.commands.GET_DTC)
+
+def resetErrors():
+    ObdConnection().connection.query(obd.commands.CLEAR_DTC)
+>>>>>>> Stashed changes
