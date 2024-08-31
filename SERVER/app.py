@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_cors import CORS
 import socketio
-from servises.ObdServisesUtils import startAllWhach
+from servises import ObdServisesUtils
 
 app = Flask(__name__)
 CORS(app,resources={r"/*":{"origins":"http://localhost:3000"}})
@@ -10,17 +10,12 @@ app.wsgi_app = socketio.WSGIApp(sio, app.wsgi_app)
 
 # pint.util.Quantity
 
+ObdServisesUtils.startAllWhach(lambda nameSpace,data: sio.emit("update_data",data=data, namespace=nameSpace))
 
-startAllWhach(lambda nameSpace,data: sio.emit("update_data",data=data, namespace=nameSpace))
+@app.route("/get-all-errors")
+def getAllErrors():
+    return ObdServisesUtils.getAllErrors()
 
-# @sio.event
-# def connect(sid, environ, auth):
-#     print('connect')
-
-# @sio.event(namespace='/general')
-# def connect(sid, environ, auth):
-#     print('connect to general')
-
-@app.route("/a")
-def hello_world():
-    return "hellow world"
+@app.route("/reset-errors", methods=["POST"])
+def resetErrors():
+    ObdServisesUtils.resetErrors()

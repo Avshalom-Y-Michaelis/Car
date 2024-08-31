@@ -5,12 +5,6 @@ import json
 def getfile(filePath):
     with open(filePath) as file:
         return json.load(file)
-    
-    
-def getSectionKeys(sectionName):
-    data = getfile('./data/obdData.json')    
-    
-    return data[sectionName]
 
 def getWhatcCallbackFunc(sectionName ,recordName, emitData):
     def func(res):
@@ -28,3 +22,9 @@ def startAllWhach(emitData):
             ObdConnection().connection.watch(obd.commands[recordName], callback=getWhatcCallbackFunc(section, recordName,emitData) ,force=True)
 
     ObdConnection().connection.start()
+
+def getAllErrors():
+    return ObdConnection().connection.query(obd.commands.GET_DTC)
+
+def resetErrors():
+    ObdConnection().connection.query(obd.commands.CLEAR_DTC)
