@@ -40,9 +40,9 @@ function PedalsSection({ gridArea }) {
                         gap: '0%',
                     }}
                 >
-                    {/* <BaseGauge layoutPart={'THROTTLE_POS'} sectionData={THROTTLE_POS} {...dataInfo.THROTTLE_POS} />
-                    <BaseGauge layoutPart={'ABSOLUTE_LOAD'} sectionData={ABSOLUTE_LOAD} {...dataInfo.ABSOLUTE_LOAD} /> */}
-                    <BaseGauge
+                    <BaseGauge layoutPart={'THROTTLE_POS'} sectionData={THROTTLE_POS} {...dataInfo.THROTTLE_POS} />
+                    <BaseGauge layoutPart={'ABSOLUTE_LOAD'} sectionData={ABSOLUTE_LOAD} {...dataInfo.ABSOLUTE_LOAD} />
+                    {/* <BaseGauge
                         layoutPart={'THROTTLE_POS'}
                         sectionData={120}
                         {...dataInfo.THROTTLE_POS}
@@ -51,7 +51,7 @@ function PedalsSection({ gridArea }) {
                         layoutPart={'ABSOLUTE_LOAD'}
                         sectionData={180}
                         {...dataInfo.ABSOLUTE_LOAD}
-                    />
+                    /> */}
                 </div>
             }
         />

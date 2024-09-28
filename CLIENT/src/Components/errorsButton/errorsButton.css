@@ -1,0 +1,7 @@
+.errors-button {
+    margin: auto;
+    width: 20vh;
+    height: 10vh;
+    background-color: red;
+    border-radius: 20px;
+}

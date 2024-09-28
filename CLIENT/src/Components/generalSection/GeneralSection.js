@@ -43,22 +43,22 @@ function GeneralSecton({ gridArea }) {
                         gap: '0%',
                     }}
                 >
-                    {/* <BaseGauge layoutPart={'RPM'} sectionData={ RPM} {...dataInfo.RPM} />
+                    <BaseGauge layoutPart={'RPM'} sectionData={ RPM} {...dataInfo.RPM} />
                     <BaseGauge layoutPart={'SPEED'} sectionData={SPEED} {...dataInfo.SPEED} />
                     <BaseGauge
                         layoutPart={'COOLANT_TEMP'}
                         sectionData={COOLANT_TEMP}
                         {...dataInfo.COOLANT_TEMP}
                     />
-                    <BaseGauge layoutPart={'RELATIVE_ACCEL_POS'} sectionData={RELATIVE_ACCEL_POS} {...dataInfo.RELATIVE_ACCEL_POS} /> */}
+                    {/* <BaseGauge layoutPart={'RELATIVE_ACCEL_POS'} sectionData={RELATIVE_ACCEL_POS} {...dataInfo.RELATIVE_ACCEL_POS} /> */}
 
-                    <BaseGauge layoutPart={'RPM'} sectionData={399} {...dataInfo.RPM} />
+                    {/* <BaseGauge layoutPart={'RPM'} sectionData={399} {...dataInfo.RPM} />
                     <BaseGauge layoutPart={'SPEED'} sectionData={455} {...dataInfo.SPEED} />
                     <BaseGauge
                         layoutPart={'COOLANT_TEMP'}
                         sectionData={45}
                         {...dataInfo.COOLANT_TEMP}
-                    />
+                    /> */}
                 </div>
             }
         />
