@@ -20,6 +20,7 @@ function App() {
             {/* <ErrorsPage /> */}
             <LayoutButton />
             {/* <ReversCamer /> */}
+            <h1 style={{color: "#ffffff"}}>{process.env.SERVER_URL}</h1>
         </div>
     );
 }
