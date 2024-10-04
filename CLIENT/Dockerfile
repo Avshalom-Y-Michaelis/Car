@@ -1,28 +1,22 @@
-# Build Stage
-FROM node:latest as build-stage
+# Build Stage as build-stage
+FROM node:latest 
 
 WORKDIR /app
 
-# Copy package.json and package-lock.json to the working directory
 COPY package*.json ./
 RUN npm install
 COPY . .
 
-RUN npm i serve
-
 ARG port
 EXPOSE ${port}
 
-RUN set "SERVER_URL='server'"
- 
-# exsport SERVER_URL="server"
-
+RUN npm i -g serve
 RUN npm run build
-CMD ["npx","serve", "-l", ${port}, "-s", "build"]
+
+ENTRYPOINT ["serve", "-s", "build", "-l"]
+CMD ["8080"]
 
 
 #buil comend
-#docker build -t car-client .
-#
-#
-#
+#docker build -t car-client  --build-arg port=8080 .
+#docker run --name client -d -p 8080:8080 car-client
